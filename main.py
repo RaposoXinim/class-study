@@ -19,12 +19,12 @@ if __name__ == "__main__":
     print("\nPessoas:")
     for pessoa in banco.buscar_todas_pessoas():
         print(pessoa)
-''' 
-    print("\nMarcas:)
+        
+
+    print("\nMarcas:")
     for marca in banco.buscar_todas_marcas():
         print(marca)
     print("\nVeículos:")
     for veiculo in banco.buscar_todos_veiculos():
-        print(veiculo)
-'''  
-#banco.fechar_conexao()
+        print(veiculo) 
+    banco.fechar_conexao()

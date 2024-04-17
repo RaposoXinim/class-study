@@ -83,7 +83,7 @@ class BancoDeDados:
         if self.conn:
             try:
                 cursor = self.conn.cursor()
-                cursor.execute("INSERT INTO Marca VALUES (?, ?, ?, ?)", 
+                cursor.execute("INSERT INTO Marca VALUES (?, ?, ?)", 
                 (marca.id, marca.nome, marca.sigla),)
                 self.conn.commit()
             except sqlite3.Error as e:
@@ -192,7 +192,7 @@ class BancoDeDados:
         if self.conn:
             try:
                 cursor = self.conn.cursor()
-                cursor.execute("SELECT * FROM Marcas")
+                cursor.execute("SELECT * FROM Marca")
                 for row in cursor.fetchall():
                     id, nome, sigla = row
                     marcas.append(Marca(id, nome, sigla))
@@ -223,3 +223,7 @@ class BancoDeDados:
             except sqlite3.Error as e:
                 print(f"Erro ao buscar marca por ID: {e}")
         return None
+    def fechar_conexao(self):
+        if self.conn:
+            self.conn.close()
+            self.conn=None
