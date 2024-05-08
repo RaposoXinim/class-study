@@ -1,13 +1,5 @@
 import tkinter as tk
 
-border_effects = {
-    "flat": tk.FLAT,
-    "afundado": tk.SUNKEN,
-    "elevado": tk.RAISED,
-    "borda": tk.GROOVE,
-    "ondulado": tk.RIDGE,
-}
-
 janela = tk.Tk()
 
 frame_a = tk.Frame()
