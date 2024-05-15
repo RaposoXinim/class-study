@@ -6,5 +6,8 @@ frame2= tk.Frame(master=janela, width=50, height=50, bg="green")
 frame2.pack()
 frame3= tk.Frame(master=janela, width=25, height=25, bg="blue")
 frame3.pack()
+janela.title('Nos <3 Python')
+janela.geometry("600x250")
+janela.eval('tk::PlaceWindow . center')
 janela.mainloop()
 
